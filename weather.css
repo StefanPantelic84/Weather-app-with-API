@@ -1,184 +1,183 @@
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #43AFFC;
-  }
-  ::selection{
-    color: #fff;
-    background: #43AFFC;
-  }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #43affc;
+}
+::selection {
+  color: #fff;
+  background: #43affc;
+}
 .container {
-    background:#fff;
-    width:400px;
-    border-radius:7px;
-    
+  background: #fff;
+  width: 400px;
+  border-radius: 7px;
 }
 .container header {
-    border-bottom:2px #81c7fa solid;
-    padding: 15px;
-    display:flex;
-    align-items: center;
-    font-size:21px;
-    font-weight:500;
-    color:#0095ff;
+  border-bottom: 2px #81c7fa solid;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 500;
+  color: #0095ff;
 }
 .errorDisplay {
-    display: block;
-    font-size: 17px;
-    text-align: center;
-    padding: 12px 10px;
-    border-radius: 7px;
-    margin-bottom: 15px;
-  }
-  .errorDisplay.error{
-    display:block;
-    color: #721c24;
-    display: block;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
-  }
-  .errorDisplay.pending{
-    display:block;
-    color: #0c5460;
-    display: block;
-    background: #d1ecf1;
-    border: 1px solid #bee5eb;
-  }
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.errorDisplay.error {
+  display: block;
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.errorDisplay.pending {
+  display: block;
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
 
 .bodyContainer {
-   /*display:none;               ----------*/
-    margin:20px 25px 30px;
+  /*display:none;               ----------*/
+  margin: 20px 25px 30px;
 }
 
 .bodyContainer input {
-    width:100%;
-    height:40px;
-    text-align: center;
-    font-size:18px;
-    border-radius:7px;
-    border:1px #bfbfbf solid;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 7px;
+  border: 1px #bfbfbf solid;
 }
 .bodyContainer button {
-    width:100%;
-    height:40px;
-    text-align: center;
-    font-size:18px;
-    border-radius:7px;
-    border:1px #bfbfbf solid;
-    cursor: pointer;
-    background: #43AFFC;
-    color:#fff;
-    transition:0.3s ease;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 7px;
+  border: 1px #bfbfbf solid;
+  cursor: pointer;
+  background: #43affc;
+  color: #fff;
+  transition: 0.3s ease;
 }
 .bodyContainer button:hover {
-    background: #1d9ffc;
+  background: #1d9ffc;
 }
 
 .separator {
-    height:1px;
-    width:100%;
-    margin:25px 0px;
-    background:#ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 1px;
+  width: 100%;
+  margin: 25px 0px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .separator::before {
-    content:"or";
-    background:rgb(255, 255, 255);
-    padding:0 15px;
-    font-size: 19px;
-    color:#bfbfbf;
+  content: "or";
+  background: rgb(255, 255, 255);
+  padding: 0 15px;
+  font-size: 19px;
+  color: #bfbfbf;
 }
 
-.visiblePart input:focus{
-    outline:none;
-    border: 2px solid #43AFFC;
+.visiblePart input:focus {
+  outline: none;
+  border: 2px solid #43affc;
 }
 
-header i{
-    font-size: 0;
-    margin-right:19px;
-    cursor:pointer;
+header i {
+  font-size: 0;
+  margin-right: 19px;
+  cursor: pointer;
 }
-.container.active header i{
-    font-size:30px;
-    margin-left:5px;
+.container.active header i {
+  font-size: 30px;
+  margin-left: 5px;
 }
 .container.active .bodyContainer {
-    display:none;
+  display: none;
 }
 .container.active .sectionWeather {
-    display:flex;
+  display: flex;
 }
 .sectionWeather img {
-    max-width:125px;
-    margin-top:0px;
+  max-width: 125px;
+  margin-top: 0px;
 }
 
 .sectionWeather {
-    display:none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .bottomDetails {
-    display:flex;
-    width:100%;
-    justify-content: space-between;
-    border-top:2px #43AFFC solid;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 2px #43affc solid;
 }
-.columnfeels{
-    display:flex;
-    border-right:1px solid #43AFFC;
-   width:50%; 
-   text-align: center;
-   font-size:30px;
-   text-align: center;
-   font-weight:600;
-   justify-content: center;
+.columnfeels {
+  display: flex;
+  border-right: 1px solid #43affc;
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  justify-content: center;
 }
 .columnhumidity {
-    display:flex;
-    border-right:1px solid #43AFFC;
-   width:50%; 
-   text-align: center;
-   font-size:30px;
-   text-align: center;
-   font-weight:600;
-   justify-content: center;
+  display: flex;
+  border-right: 1px solid #43affc;
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  justify-content: center;
 }
 .temp {
-    font-size:65px;
-    font-weight:600;
+  font-size: 65px;
+  font-weight: 600;
 }
 
 .location2 {
-    font-size:22px;
-    margin-bottom:20px;
-    font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 900;
 }
-.columnfeels i{
-    color:#43AFFC;
-    font-size:42px;
+.columnfeels i {
+  color: #43affc;
+  font-size: 42px;
 }
 .pasus {
-    font-size:15px;
-    margin-top:-6px;
-    font-weight:400;
+  font-size: 15px;
+  margin-top: -6px;
+  font-weight: 400;
 }
-.columnhumidity i{
-    color:#43AFFC;
-    font-size:36px;
+.columnhumidity i {
+  color: #43affc;
+  font-size: 36px;
 }
-.weather{
-    text-transform: capitalize;
+.weather {
+  text-transform: capitalize;
 }
